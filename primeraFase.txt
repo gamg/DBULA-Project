@@ -1,0 +1,23 @@
+En vista de los cambios en la programación del semestre, vamos a trabajar con el proyecto de la siguiente forma. El objetivo principal del proyecto es construir un sistema de información para alguna empresa u organización en algún proceso que tengan conocimiento del tema o conozcan a alguien que pueda darles la información necesaria para conocer a profundidad el minimundo que van a modelar.
+
+
+El problema a resolver y los procesos involucrados deben ser de mediana complejidad, deben contemplar operaciones que van más allá de los CRUDs (Create, Restore, Update y Delete) de los datos.
+
+ 
+Para el día 6/5/2017 deben entregar un primer informe de su proyecto que contenga los siguientes puntos:
+
+* Descripción concisa del problema (en alrededor de 250 palabras) y las razones por las que se utilizará un sistema de bases de datos para resolver este problema en lugar de usar sólo archivos.
+
+* Modelo de actores
+
+* Diagramas de actividades de los procesos involucrados
+
+* Modelo conceptual del problema (ERE)
+
+* Modelo relacional normalizado a 3FN, incluyendo las restricciones necesarias.
+
+* Implementación del modelo relacional en SQL
+
+ 
+
+El proyecto pueden realizarlo en grupos de dos personas o de forma individual según su preferencia.
