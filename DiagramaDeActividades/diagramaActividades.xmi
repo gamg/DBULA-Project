@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<XMI verified="false" xmi.version="1.2" timestamp="2017-05-06T23:57:07" xmlns:UML="http://schema.omg.org/spec/UML/1.3">
+<XMI verified="false" xmi.version="1.2" timestamp="2017-11-12T20:01:22" xmlns:UML="http://schema.omg.org/spec/UML/1.3">
  <XMI.header>
   <XMI.documentation>
    <XMI.exporter>umbrello uml modeller http://umbrello.kde.org</XMI.exporter>
@@ -38,43 +38,41 @@
         <messages/>
         <associations/>
        </diagram>
-       <diagram showopsig="1" linecolor="#ff0000" snapx="25" showattribassocs="1" snapy="25" linewidth="0" showattsig="1" textcolor="#000000" isopen="1" showpackage="1" showpubliconly="1" showstereotype="1" name="diagrama_actividades" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" canvasheight="955,8048706054688" canvaswidth="1301,43896484375" localid="-1" snapcsgrid="0" showgrid="0" showops="1" griddotcolor="#d3d3d3" backgroundcolor="#ffffff" usefillcolor="1" fillcolor="#ffff00" zoom="93" xmi.id="uS8A2qZpWbLS" documentation="" showscope="1" snapgrid="0" showatts="1" type="6">
+       <diagram showopsig="1" linecolor="#ff0000" snapx="25" showattribassocs="1" snapy="25" linewidth="0" showattsig="1" textcolor="#000000" isopen="1" showpackage="1" showpubliconly="1" showstereotype="1" name="diagrama_actividades" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" canvasheight="1025,278481012658" canvaswidth="1322,43896484375" localid="-1" snapcsgrid="0" showgrid="0" showops="1" griddotcolor="#d3d3d3" backgroundcolor="#ffffff" usefillcolor="1" fillcolor="#ffff00" zoom="79" xmi.id="uS8A2qZpWbLS" documentation="" showscope="1" snapgrid="0" showatts="1" type="6">
         <widgets>
-         <activitywidget linecolor="none" usesdiagramfillcolor="0" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="0" x="-988,1438345560214" showstereotype="1" y="-912,0232573718559" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" localid="K8cdTe78uEKI" width="15" isinstance="0" usefillcolor="1" fillcolor="#ffff00" activityname="" xmi.id="Wn6e54HpiZdS" postcondition="" documentation="" activitytype="0" height="15" precondition=""/>
+         <activitywidget linecolor="none" usesdiagramfillcolor="0" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="0" x="-988,1438598632812" showstereotype="1" y="-912,0232543945312" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" localid="K8cdTe78uEKI" width="15" isinstance="0" usefillcolor="1" fillcolor="#ffff00" activityname="" xmi.id="Wn6e54HpiZdS" postcondition="" documentation="" activitytype="0" height="15" precondition=""/>
          <activitywidget linecolor="none" usesdiagramfillcolor="0" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="0" x="-1041,415161132812" showstereotype="1" y="-826,65771484375" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" localid="VQpz6oINhiiJ" width="125" isinstance="0" usefillcolor="1" fillcolor="#ffff00" activityname="selecciona local" xmi.id="R1I4bb7Kqn1s" postcondition="" documentation="" activitytype="1" height="24" precondition=""/>
          <activitywidget linecolor="none" usesdiagramfillcolor="0" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="0" x="-1044,345092773438" showstereotype="1" y="-746,0297241210938" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" localid="pPE2c5l5UY2a" width="140" isinstance="0" usefillcolor="1" fillcolor="#ffff00" activityname="selecciona plato(s)" xmi.id="MKv20cLRdbWC" postcondition="" documentation="" activitytype="1" height="24" precondition=""/>
          <activitywidget linecolor="none" usesdiagramfillcolor="0" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="0" x="-1044,201904296875" showstereotype="1" y="-585,8253173828125" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" localid="BbWzMVrCv5EV" width="151" isinstance="0" usefillcolor="1" fillcolor="#ffff00" activityname="selecciona bebida(s)" xmi.id="8zacVcAsw4uw" postcondition="" documentation="" activitytype="1" height="24" precondition=""/>
          <activitywidget linecolor="none" usesdiagramfillcolor="0" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="0" x="-999,2994384765625" showstereotype="1" y="-684,4900512695312" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" localid="gFLHopUzOyyl" width="48" isinstance="0" usefillcolor="1" fillcolor="#ffff00" activityname="" xmi.id="UnvNq9sx6SXb" postcondition="" documentation="" activitytype="4" height="48" precondition=""/>
          <activitywidget linecolor="none" usesdiagramfillcolor="0" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="0" x="-754,89208984375" showstereotype="1" y="-650,1261596679688" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" localid="ypY2rTv1GlGT" width="175" isinstance="0" usefillcolor="1" fillcolor="#ffff00" activityname="selecciona método pago" xmi.id="96kAJxws25wL" postcondition="" documentation="" activitytype="1" height="24" precondition=""/>
          <activitywidget linecolor="none" usesdiagramfillcolor="0" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="0" x="-780,1093139648438" showstereotype="1" y="-526,8152465820312" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" localid="sKan3Fl15K2w" width="116" isinstance="0" usefillcolor="1" fillcolor="#ffff00" activityname="verificar pedido" xmi.id="lvx2fBVoHEwZ" postcondition="" documentation="" activitytype="1" height="24" precondition=""/>
-         <activitywidget linecolor="none" usesdiagramfillcolor="0" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="0" x="-996,5657348632812" showstereotype="1" y="-460,7653503417969" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" localid="Rw5g80FJsfVo" width="50" isinstance="0" usefillcolor="1" fillcolor="#ffff00" activityname="" xmi.id="02fe8EMVb3tE" postcondition="" documentation="" activitytype="4" height="50" precondition=""/>
+         <activitywidget linecolor="none" usesdiagramfillcolor="0" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="0" x="-955,7055053710938" showstereotype="1" y="-447,8621215820312" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" localid="Rw5g80FJsfVo" width="50" isinstance="0" usefillcolor="1" fillcolor="#ffff00" activityname="" xmi.id="02fe8EMVb3tE" postcondition="" documentation="" activitytype="4" height="50" precondition=""/>
          <activitywidget linecolor="none" usesdiagramfillcolor="0" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="0" x="-867,0731811523438" showstereotype="1" y="-687,8048706054688" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" localid="n8kwJNrnsJLZ" width="50" isinstance="0" usefillcolor="1" fillcolor="#ffff00" activityname="" xmi.id="kJNa2Doa6gDU" postcondition="" documentation="" activitytype="4" height="50" precondition=""/>
          <activitywidget linecolor="none" usesdiagramfillcolor="0" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="0" x="-757,3170776367188" showstereotype="1" y="-762,1951293945312" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" localid="yNmj6WYtcJpv" width="140" isinstance="0" usefillcolor="1" fillcolor="#ffff00" activityname="selecciona extra(s)" xmi.id="ghhYy05gKSFK" postcondition="" documentation="" activitytype="1" height="24" precondition=""/>
-         <activitywidget linecolor="none" usesdiagramfillcolor="0" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="0" x="-1017,073181152344" showstereotype="1" y="-525,6097412109375" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" localid="hZWzzlHdpAMX" width="105" isinstance="0" usefillcolor="1" fillcolor="#ffff00" activityname="enviar pedido" xmi.id="GYDhVcFzXf3o" postcondition="" documentation="" activitytype="1" height="24" precondition=""/>
-         <activitywidget linecolor="none" usesdiagramfillcolor="0" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="0" x="-1196,341430664062" showstereotype="1" y="-374,3902587890625" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" localid="yNt9nzOKdXR6" width="171" isinstance="0" usefillcolor="1" fillcolor="#ffff00" activityname="Pagar con transferencia" xmi.id="Fy2kraRqPHp8" postcondition="" documentation="" activitytype="1" height="24" precondition=""/>
-         <activitywidget linecolor="none" usesdiagramfillcolor="0" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="0" x="-925,6097412109375" showstereotype="1" y="-371,9512329101562" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" localid="sNSSy77uTy4G" width="129" isinstance="0" usefillcolor="1" fillcolor="#ffff00" activityname="Pagar en efectivo" xmi.id="xQYYvyfAwhvm" postcondition="" documentation="" activitytype="1" height="24" precondition=""/>
+         <activitywidget linecolor="none" usesdiagramfillcolor="0" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="0" x="-1017,073181152344" showstereotype="1" y="-525,6097412109375" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" localid="hZWzzlHdpAMX" width="116" isinstance="0" usefillcolor="1" fillcolor="#ffff00" activityname="solicitar pedido" xmi.id="GYDhVcFzXf3o" postcondition="" documentation="" activitytype="1" height="24" precondition=""/>
+         <activitywidget linecolor="none" usesdiagramfillcolor="0" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="0" x="-1194,19091796875" showstereotype="1" y="-377,6160583496094" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" localid="yNt9nzOKdXR6" width="171" isinstance="0" usefillcolor="1" fillcolor="#ffff00" activityname="Pagar con transferencia" xmi.id="Fy2kraRqPHp8" postcondition="" documentation="" activitytype="1" height="24" precondition=""/>
          <activitywidget linecolor="none" usesdiagramfillcolor="0" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="0" x="-1171,951171875" showstereotype="1" y="-298,7804870605469" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" localid="FKaebNlSjDuh" width="115" isinstance="0" usefillcolor="1" fillcolor="#ffff00" activityname="confirmar pago" xmi.id="Lzcmxe2s4ZRz" postcondition="" documentation="" activitytype="1" height="24" precondition=""/>
-         <activitywidget linecolor="none" usesdiagramfillcolor="0" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="0" x="-1057,317016601562" showstereotype="1" y="-189,0243835449219" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" localid="X6ARl3D1Nody" width="134" isinstance="0" usefillcolor="1" fillcolor="#ffff00" activityname="recibir pedido" xmi.id="9OQsaJatIAfE" postcondition="" documentation="" activitytype="1" height="24" precondition=""/>
-         <activitywidget linecolor="none" usesdiagramfillcolor="0" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="0" x="-687,8048706054688" showstereotype="1" y="-102,4390258789062" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" localid="mf6qEVnjbvBL" width="15" isinstance="0" usefillcolor="1" fillcolor="#ffff00" activityname="" xmi.id="yMKL8xIIKgAu" postcondition="" documentation="" activitytype="2" height="15" precondition=""/>
+         <activitywidget linecolor="none" usesdiagramfillcolor="0" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="0" x="-400,9394840288766" showstereotype="1" y="-860,3265898499308" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" localid="mf6qEVnjbvBL" width="15" isinstance="0" usefillcolor="1" fillcolor="#ffff00" activityname="" xmi.id="yMKL8xIIKgAu" postcondition="" documentation="" activitytype="2" height="15" precondition=""/>
          <activitywidget linecolor="none" usesdiagramfillcolor="0" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="0" x="-439,0243835449219" showstereotype="1" y="-252,4390258789062" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" localid="EjvWQ4ONm9db" width="123" isinstance="0" usefillcolor="1" fillcolor="#ffff00" activityname="procesar pedido" xmi.id="Z7DegeukswNz" postcondition="" documentation="" activitytype="1" height="24" precondition=""/>
          <activitywidget linecolor="none" usesdiagramfillcolor="0" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="0" x="-437,8048706054688" showstereotype="1" y="-434,1463317871094" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" localid="6M7dcXHqGCKe" width="109" isinstance="0" usefillcolor="1" fillcolor="#ffff00" activityname="hacer plato(s)" xmi.id="Gi21rfcOln1R" postcondition="" documentation="" activitytype="1" height="24" precondition=""/>
          <activitywidget linecolor="none" usesdiagramfillcolor="0" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="0" x="-290,243896484375" showstereotype="1" y="-346,3414611816406" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" localid="QsaBgbc5VlNM" width="218" isinstance="0" usefillcolor="1" fillcolor="#ffff00" activityname="verificar pago por transferencia" xmi.id="JeIC0shsg00h" postcondition="" documentation="" activitytype="1" height="24" precondition=""/>
          <activitywidget linecolor="none" usesdiagramfillcolor="0" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="0" x="-434,1463317871094" showstereotype="1" y="-518,2926635742188" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" localid="emxzXD9x6h8k" width="105" isinstance="0" usefillcolor="1" fillcolor="#ffff00" activityname="enviar pedido" xmi.id="HipmTA8kmPul" postcondition="" documentation="" activitytype="1" height="24" precondition=""/>
          <floatingtext linecolor="none" usesdiagramfillcolor="0" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="0" x="-4" showstereotype="1" y="0" text="new time event" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" localid="X7pIWj3lLght" pretext="" role="700" width="103" isinstance="0" posttext="" usefillcolor="1" fillcolor="#ffff00" xmi.id="HI5eqFZbVORT" height="18"/>
-         <forkjoin width="100" showstereotype="1" x="-908,5365600585938" usesdiagramusefillcolor="0" y="-300" drawvertical="0" usesdiagramfillcolor="0" isinstance="0" localid="KyixJh4rnr7J" fillcolor="#ffff00" height="10" linecolor="#000000" xmi.id="aA3tokm50sjo" textcolor="#000000" usefillcolor="1" linewidth="0" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0"/>
-         <forkjoin width="100" showstereotype="1" x="-1162,195068359375" usesdiagramusefillcolor="0" y="-231,7073211669922" drawvertical="0" usesdiagramfillcolor="0" isinstance="0" localid="5GNYfm0xlgu4" fillcolor="#ffff00" height="10" linecolor="#000000" xmi.id="OwtBn0SO8VHw" textcolor="#000000" usefillcolor="1" linewidth="0" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0"/>
+         <forkjoin width="100" showstereotype="1" x="-1062,195068359375" usesdiagramusefillcolor="0" y="-214,5030212402344" drawvertical="0" usesdiagramfillcolor="0" isinstance="0" localid="5GNYfm0xlgu4" fillcolor="#ffff00" height="10" linecolor="#000000" xmi.id="OwtBn0SO8VHw" textcolor="#000000" usefillcolor="1" linewidth="0" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0"/>
          <activitywidget linecolor="none" usesdiagramfillcolor="0" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="0" x="-409,756103515625" showstereotype="1" y="-352,4390258789062" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" localid="n9avfrsqtr2n" width="50" isinstance="0" usefillcolor="1" fillcolor="#ffff00" activityname="" xmi.id="a1iYOEAWhiOr" postcondition="" documentation="" activitytype="4" height="50" precondition=""/>
-         <activitywidget linecolor="none" usesdiagramfillcolor="0" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="0" x="-442,6829223632812" showstereotype="1" y="-597,5609741210938" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" localid="AJNY84ktEKor" width="122" isinstance="0" usefillcolor="1" fillcolor="#ffff00" activityname="entregar pedido" xmi.id="Aeh3Uhp4jXa5" postcondition="" documentation="" activitytype="1" height="24" precondition=""/>
-         <activitywidget linecolor="none" usesdiagramfillcolor="0" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="0" x="-435,3658447265625" showstereotype="1" y="-674,3902587890625" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" localid="jjbPR0EZJc7P" width="109" isinstance="0" usefillcolor="1" fillcolor="#ffff00" activityname="generar venta" xmi.id="gqIs85hIhNKB" postcondition="" documentation="" activitytype="1" height="24" precondition=""/>
+         <activitywidget linecolor="none" usesdiagramfillcolor="0" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="0" x="-441,607666015625" showstereotype="1" y="-601,862060546875" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" localid="AJNY84ktEKor" width="122" isinstance="0" usefillcolor="1" fillcolor="#ffff00" activityname="entregar pedido" xmi.id="Aeh3Uhp4jXa5" postcondition="" documentation="" activitytype="1" height="24" precondition=""/>
          <boxwidget width="636,5853881835938" showstereotype="1" x="-1202,43896484375" usesdiagramusefillcolor="0" y="-937,8048706054688" usesdiagramfillcolor="0" isinstance="0" localid="49EngorOXSnw" fillcolor="#ffff00" height="872,6829223632812" linecolor="#000000" xmi.id="Q1Vkbb7GRQ6X" textcolor="#000000" usefillcolor="1" linewidth="0" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0"/>
-         <boxwidget width="501,2195129394531" showstereotype="1" x="-567,0731811523438" usesdiagramusefillcolor="0" y="-937,8048706054688" usesdiagramfillcolor="0" isinstance="0" localid="ToqABAMDHazv" fillcolor="#ffff00" height="872,6829223632812" linecolor="#000000" xmi.id="MqJuG4qh4KPf" textcolor="#000000" usefillcolor="1" linewidth="0" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0"/>
+         <boxwidget width="510,8969421386719" showstereotype="1" x="-565,9979123351395" usesdiagramusefillcolor="0" y="-937,8048706054688" usesdiagramfillcolor="0" isinstance="0" localid="ToqABAMDHazv" fillcolor="#ffff00" height="873,7581787109375" linecolor="#000000" xmi.id="MqJuG4qh4KPf" textcolor="#000000" usefillcolor="1" linewidth="0" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0"/>
+         <activitywidget linecolor="none" usesdiagramfillcolor="0" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="0" x="-294,991152851504" showstereotype="1" y="-791,0847965155846" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" localid="c7eBTdcvSkoj" width="134" isinstance="0" usefillcolor="1" fillcolor="#ffff00" activityname="cobrar en efectivo" xmi.id="ljlRc3TGhxQw" postcondition="" documentation="" activitytype="1" height="24" precondition=""/>
+         <activitywidget linecolor="none" usesdiagramfillcolor="0" linewidth="0" textcolor="#000000" usesdiagramusefillcolor="0" x="-408,8063155029263" showstereotype="1" y="-701,8919286783721" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" localid="FvTFUQR6V5Hy" width="50" isinstance="0" usefillcolor="1" fillcolor="#ffff00" activityname="" xmi.id="gsr9ceqMNbnx" postcondition="" documentation="" activitytype="4" height="50" precondition=""/>
         </widgets>
         <messages/>
         <associations>
          <assocwidget roleBdoc="" linecolor="none" indexa="1" usesdiagramfillcolor="1" widgetbid="R1I4bb7Kqn1s" indexb="1" linewidth="none" seqnum="" textcolor="none" usesdiagramusefillcolor="1" totalcounta="2" totalcountb="2" roleAdoc="" widgetaid="Wn6e54HpiZdS" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" visibilityA="0" visibilityB="0" usefillcolor="1" fillcolor="none" changeabilityA="900" changeabilityB="900" documentation="" type="515">
           <linepath layout="Polyline">
-           <startpoint startx="-980,8267613852896" starty="-897,0232573718559"/>
-           <endpoint endx="-980,8267613852896" endy="-826,65771484375"/>
+           <startpoint startx="-980,8267822265625" starty="-897,0232543945312"/>
+           <endpoint endx="-980,8267822265625" endy="-826,65771484375"/>
           </linepath>
          </assocwidget>
          <assocwidget roleBdoc="" linecolor="none" indexa="1" usesdiagramfillcolor="0" widgetbid="MKv20cLRdbWC" indexb="1" linewidth="none" seqnum="" textcolor="none" usesdiagramusefillcolor="1" totalcounta="2" totalcountb="2" roleAdoc="" widgetaid="R1I4bb7Kqn1s" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" visibilityA="0" visibilityB="0" usefillcolor="1" fillcolor="#ffff00" changeabilityA="900" changeabilityB="900" documentation="" type="515">
@@ -122,7 +120,7 @@
          <assocwidget roleBdoc="" linecolor="none" indexa="1" usesdiagramfillcolor="0" widgetbid="GYDhVcFzXf3o" indexb="1" linewidth="none" seqnum="" textcolor="none" usesdiagramusefillcolor="1" totalcounta="2" totalcountb="2" roleAdoc="" widgetaid="lvx2fBVoHEwZ" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" visibilityA="0" visibilityB="0" usefillcolor="1" fillcolor="#ffff00" changeabilityA="900" changeabilityB="900" documentation="" type="515">
           <linepath layout="Polyline">
            <startpoint startx="-780,1093139648438" starty="-512,5853881835938"/>
-           <endpoint endx="-912,0731811523438" endy="-512,5853881835938"/>
+           <endpoint endx="-901,0731811523438" endy="-512,5853881835938"/>
           </linepath>
          </assocwidget>
          <assocwidget roleBdoc="" linecolor="none" indexa="1" usesdiagramfillcolor="0" widgetbid="kJNa2Doa6gDU" indexb="1" linewidth="none" seqnum="" textcolor="none" usesdiagramusefillcolor="1" totalcounta="2" totalcountb="2" roleAdoc="" widgetaid="UnvNq9sx6SXb" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" visibilityA="0" visibilityB="0" usefillcolor="1" fillcolor="#ffff00" changeabilityA="900" changeabilityB="900" documentation="" type="515">
@@ -139,68 +137,32 @@
          </assocwidget>
          <assocwidget roleBdoc="" linecolor="none" indexa="1" usesdiagramfillcolor="0" widgetbid="02fe8EMVb3tE" indexb="1" linewidth="none" seqnum="" textcolor="none" usesdiagramusefillcolor="0" totalcounta="2" totalcountb="2" roleAdoc="" widgetaid="GYDhVcFzXf3o" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" visibilityA="0" visibilityB="0" usefillcolor="1" fillcolor="#ffff00" changeabilityA="900" changeabilityB="900" documentation="" type="515">
           <linepath layout="Polyline">
-           <startpoint startx="-971,5657348632812" starty="-501,6097412109375"/>
-           <endpoint endx="-971,5657348632812" endy="-460,7653503417969"/>
+           <startpoint startx="-933,1248779296875" starty="-501,6097412109375"/>
+           <endpoint endx="-933,1248779296875" endy="-447,8621215820312"/>
           </linepath>
          </assocwidget>
          <assocwidget roleBdoc="" linecolor="none" indexa="1" usesdiagramfillcolor="0" widgetbid="Fy2kraRqPHp8" indexb="1" linewidth="none" seqnum="" textcolor="none" usesdiagramusefillcolor="1" totalcounta="2" totalcountb="2" roleAdoc="" widgetaid="02fe8EMVb3tE" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" visibilityA="0" visibilityB="0" usefillcolor="1" fillcolor="#ffff00" changeabilityA="900" changeabilityB="900" documentation="" type="515">
           <linepath layout="Polyline">
-           <startpoint startx="-996,5657348632812" starty="-410,7653503417969"/>
-           <endpoint endx="-1025,341430664062" endy="-374,3902587890625"/>
-          </linepath>
-         </assocwidget>
-         <assocwidget roleBdoc="" linecolor="none" indexa="1" usesdiagramfillcolor="0" widgetbid="xQYYvyfAwhvm" indexb="1" linewidth="none" seqnum="" textcolor="none" usesdiagramusefillcolor="0" totalcounta="2" totalcountb="2" roleAdoc="" widgetaid="02fe8EMVb3tE" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" visibilityA="0" visibilityB="0" usefillcolor="1" fillcolor="#ffff00" changeabilityA="900" changeabilityB="900" documentation="" type="515">
-          <linepath layout="Polyline">
-           <startpoint startx="-946,5657348632812" starty="-410,7653503417969"/>
-           <endpoint endx="-925,6097412109375" endy="-371,9512329101562"/>
+           <startpoint startx="-955,7055053710938" starty="-397,8621215820312"/>
+           <endpoint endx="-1023,19091796875" endy="-377,6160583496094"/>
           </linepath>
          </assocwidget>
          <assocwidget roleBdoc="" linecolor="none" indexa="1" usesdiagramfillcolor="0" widgetbid="Lzcmxe2s4ZRz" indexb="1" linewidth="none" seqnum="" textcolor="none" usesdiagramusefillcolor="0" totalcounta="2" totalcountb="2" roleAdoc="" widgetaid="Fy2kraRqPHp8" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" visibilityA="0" visibilityB="0" usefillcolor="1" fillcolor="#ffff00" changeabilityA="900" changeabilityB="900" documentation="" type="515">
           <linepath layout="Polyline">
-           <startpoint startx="-1114,451171875" starty="-350,3902587890625"/>
+           <startpoint startx="-1114,451171875" starty="-353,6160583496094"/>
            <endpoint endx="-1114,451171875" endy="-298,7804870605469"/>
-          </linepath>
-         </assocwidget>
-         <assocwidget roleBdoc="" linecolor="none" indexa="1" usesdiagramfillcolor="1" widgetbid="yMKL8xIIKgAu" indexb="1" linewidth="none" seqnum="" textcolor="none" usesdiagramusefillcolor="1" totalcounta="2" totalcountb="2" roleAdoc="" widgetaid="9OQsaJatIAfE" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" visibilityA="0" visibilityB="0" usefillcolor="1" fillcolor="none" changeabilityA="900" changeabilityB="900" documentation="" type="515">
-          <linepath layout="Polyline">
-           <startpoint startx="-923,3170166015625" starty="-165,0243835449219"/>
-           <endpoint endx="-687,8048706054688" endy="-102,4390258789062"/>
-          </linepath>
-         </assocwidget>
-         <assocwidget roleBdoc="" linecolor="none" indexa="1" usesdiagramfillcolor="0" widgetbid="aA3tokm50sjo" indexb="1" linewidth="none" seqnum="" textcolor="none" usesdiagramusefillcolor="1" totalcounta="2" totalcountb="2" roleAdoc="" widgetaid="xQYYvyfAwhvm" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" visibilityA="0" visibilityB="0" usefillcolor="1" fillcolor="#ffff00" changeabilityA="900" changeabilityB="900" documentation="" type="515">
-          <linepath layout="Polyline">
-           <startpoint startx="-858,5365600585938" starty="-347,9512329101562"/>
-           <endpoint endx="-858,5365600585938" endy="-300"/>
           </linepath>
          </assocwidget>
          <assocwidget roleBdoc="" linecolor="none" indexa="1" usesdiagramfillcolor="0" widgetbid="OwtBn0SO8VHw" indexb="1" linewidth="none" seqnum="" textcolor="none" usesdiagramusefillcolor="1" totalcounta="2" totalcountb="2" roleAdoc="" widgetaid="Lzcmxe2s4ZRz" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" visibilityA="0" visibilityB="0" usefillcolor="1" fillcolor="#ffff00" changeabilityA="900" changeabilityB="900" documentation="" type="515">
           <linepath layout="Polyline">
-           <startpoint startx="-1112,195068359375" starty="-274,7804870605469"/>
-           <endpoint endx="-1112,195068359375" endy="-231,7073211669922"/>
-          </linepath>
-         </assocwidget>
-         <assocwidget roleBdoc="" linecolor="none" indexa="1" usesdiagramfillcolor="1" widgetbid="9OQsaJatIAfE" indexb="1" linewidth="none" seqnum="" textcolor="none" usesdiagramusefillcolor="1" totalcounta="2" totalcountb="2" roleAdoc="" widgetaid="OwtBn0SO8VHw" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" visibilityA="0" visibilityB="0" usefillcolor="1" fillcolor="none" changeabilityA="900" changeabilityB="900" documentation="" type="515">
-          <linepath layout="Polyline">
-           <startpoint startx="-1062,195068359375" starty="-221,7073211669922"/>
-           <endpoint endx="-1057,317016601562" endy="-189,0243835449219"/>
-          </linepath>
-         </assocwidget>
-         <assocwidget roleBdoc="" linecolor="none" indexa="1" usesdiagramfillcolor="0" widgetbid="9OQsaJatIAfE" indexb="1" linewidth="none" seqnum="" textcolor="none" usesdiagramusefillcolor="1" totalcounta="2" totalcountb="2" roleAdoc="" widgetaid="aA3tokm50sjo" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" visibilityA="0" visibilityB="0" usefillcolor="1" fillcolor="#ffff00" changeabilityA="900" changeabilityB="900" documentation="" type="515">
-          <linepath layout="Polyline">
-           <startpoint startx="-908,5365600585938" starty="-290"/>
-           <endpoint endx="-923,3170166015625" endy="-189,0243835449219"/>
+           <startpoint startx="-1056,951171875" starty="-274,7804870605469"/>
+           <endpoint endx="-1056,951171875" endy="-214,5030212402344"/>
           </linepath>
          </assocwidget>
          <assocwidget roleBdoc="" linecolor="none" indexa="1" usesdiagramfillcolor="1" widgetbid="Z7DegeukswNz" indexb="1" linewidth="none" seqnum="" textcolor="none" usesdiagramusefillcolor="0" totalcounta="2" totalcountb="2" roleAdoc="" widgetaid="OwtBn0SO8VHw" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" visibilityA="0" visibilityB="0" usefillcolor="1" fillcolor="none" changeabilityA="900" changeabilityB="900" documentation="" type="515">
           <linepath layout="Polyline">
-           <startpoint startx="-1062,195068359375" starty="-228,4390258789062"/>
+           <startpoint startx="-962,195068359375" starty="-214,5030212402344"/>
            <endpoint endx="-439,0243835449219" endy="-228,4390258789062"/>
-          </linepath>
-         </assocwidget>
-         <assocwidget roleBdoc="" linecolor="none" indexa="1" usesdiagramfillcolor="0" widgetbid="Z7DegeukswNz" indexb="1" linewidth="none" seqnum="" textcolor="none" usesdiagramusefillcolor="1" totalcounta="2" totalcountb="2" roleAdoc="" widgetaid="aA3tokm50sjo" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" visibilityA="0" visibilityB="0" usefillcolor="1" fillcolor="#ffff00" changeabilityA="900" changeabilityB="900" documentation="" type="515">
-          <linepath layout="Polyline">
-           <startpoint startx="-808,5365600585938" starty="-290"/>
-           <endpoint endx="-439,0243835449219" endy="-252,4390258789062"/>
           </linepath>
          </assocwidget>
          <assocwidget roleBdoc="" linecolor="none" indexa="1" usesdiagramfillcolor="0" widgetbid="JeIC0shsg00h" indexb="1" linewidth="none" seqnum="" textcolor="none" usesdiagramusefillcolor="1" totalcounta="2" totalcountb="2" roleAdoc="" widgetaid="a1iYOEAWhiOr" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" visibilityA="0" visibilityB="0" usefillcolor="1" fillcolor="#ffff00" changeabilityA="900" changeabilityB="900" documentation="" type="515">
@@ -235,20 +197,38 @@
          </assocwidget>
          <assocwidget roleBdoc="" linecolor="none" indexa="1" usesdiagramfillcolor="0" widgetbid="Aeh3Uhp4jXa5" indexb="1" linewidth="none" seqnum="" textcolor="none" usesdiagramusefillcolor="1" totalcounta="2" totalcountb="2" roleAdoc="" widgetaid="HipmTA8kmPul" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" visibilityA="0" visibilityB="0" usefillcolor="1" fillcolor="#ffff00" changeabilityA="900" changeabilityB="900" documentation="" type="515">
           <linepath layout="Polyline">
-           <startpoint startx="-384,0975646972656" starty="-518,2926635742188"/>
-           <endpoint endx="-384,0975646972656" endy="-573,5609741210938"/>
+           <startpoint startx="-379,2420654296875" starty="-518,2926635742188"/>
+           <endpoint endx="-379,2420654296875" endy="-577,862060546875"/>
           </linepath>
          </assocwidget>
-         <assocwidget roleBdoc="" linecolor="none" indexa="1" usesdiagramfillcolor="1" widgetbid="gqIs85hIhNKB" indexb="1" linewidth="none" seqnum="" textcolor="none" usesdiagramusefillcolor="0" totalcounta="2" totalcountb="2" roleAdoc="" widgetaid="Aeh3Uhp4jXa5" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" visibilityA="0" visibilityB="0" usefillcolor="1" fillcolor="none" changeabilityA="900" changeabilityB="900" documentation="" type="515">
+         <assocwidget roleBdoc="" linecolor="none" indexa="1" usesdiagramfillcolor="0" widgetbid="OwtBn0SO8VHw" indexb="1" linewidth="none" seqnum="" textcolor="none" usesdiagramusefillcolor="0" totalcounta="2" totalcountb="2" roleAdoc="" widgetaid="02fe8EMVb3tE" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" visibilityA="0" visibilityB="0" usefillcolor="1" fillcolor="#ffff00" changeabilityA="900" changeabilityB="900" documentation="" type="515">
           <linepath layout="Polyline">
-           <startpoint startx="-380,8658447265625" starty="-597,5609741210938"/>
-           <endpoint endx="-380,8658447265625" endy="-650,3902587890625"/>
+           <startpoint startx="-955,7055053710938" starty="-397,8621215820312"/>
+           <endpoint endx="-962,195068359375" endy="-214,5030212402344"/>
           </linepath>
          </assocwidget>
-         <assocwidget roleBdoc="" linecolor="none" indexa="1" usesdiagramfillcolor="0" widgetbid="yMKL8xIIKgAu" indexb="1" linewidth="none" seqnum="" textcolor="none" usesdiagramusefillcolor="0" totalcounta="2" totalcountb="2" roleAdoc="" widgetaid="gqIs85hIhNKB" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" visibilityA="0" visibilityB="0" usefillcolor="1" fillcolor="#ffff00" changeabilityA="900" changeabilityB="900" documentation="" type="515">
+         <assocwidget roleBdoc="" linecolor="none" indexa="1" usesdiagramfillcolor="0" widgetbid="gsr9ceqMNbnx" indexb="1" linewidth="none" seqnum="" textcolor="none" usesdiagramusefillcolor="0" totalcounta="2" totalcountb="2" roleAdoc="" widgetaid="Aeh3Uhp4jXa5" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" visibilityA="0" visibilityB="0" usefillcolor="1" fillcolor="#ffff00" changeabilityA="900" changeabilityB="900" documentation="" type="515">
           <linepath layout="Polyline">
-           <startpoint startx="-435,3658447265625" starty="-650,3902587890625"/>
-           <endpoint endx="-672,8048706054688" endy="-102,4390258789062"/>
+           <startpoint startx="-382,8569484143187" starty="-601,862060546875"/>
+           <endpoint endx="-382,8569484143187" endy="-651,8919286783721"/>
+          </linepath>
+         </assocwidget>
+         <assocwidget roleBdoc="" linecolor="none" indexa="1" usesdiagramfillcolor="0" widgetbid="ljlRc3TGhxQw" indexb="1" linewidth="none" seqnum="" textcolor="none" usesdiagramusefillcolor="0" totalcounta="2" totalcountb="2" roleAdoc="" widgetaid="gsr9ceqMNbnx" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" visibilityA="0" visibilityB="0" usefillcolor="1" fillcolor="#ffff00" changeabilityA="900" changeabilityB="900" documentation="" type="515">
+          <linepath layout="Polyline">
+           <startpoint startx="-358,8063155029263" starty="-701,8919286783721"/>
+           <endpoint endx="-294,991152851504" endy="-767,0847965155846"/>
+          </linepath>
+         </assocwidget>
+         <assocwidget roleBdoc="" linecolor="none" indexa="1" usesdiagramfillcolor="0" widgetbid="yMKL8xIIKgAu" indexb="1" linewidth="none" seqnum="" textcolor="none" usesdiagramusefillcolor="0" totalcounta="2" totalcountb="2" roleAdoc="" widgetaid="ljlRc3TGhxQw" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" visibilityA="0" visibilityB="0" usefillcolor="1" fillcolor="#ffff00" changeabilityA="900" changeabilityB="900" documentation="" type="515">
+          <linepath layout="Polyline">
+           <startpoint startx="-294,991152851504" starty="-791,0847965155846"/>
+           <endpoint endx="-385,9394840288766" endy="-845,3265898499308"/>
+          </linepath>
+         </assocwidget>
+         <assocwidget roleBdoc="" linecolor="none" indexa="1" usesdiagramfillcolor="0" widgetbid="yMKL8xIIKgAu" indexb="1" linewidth="none" seqnum="" textcolor="none" usesdiagramusefillcolor="0" totalcounta="2" totalcountb="2" roleAdoc="" widgetaid="gsr9ceqMNbnx" font="DejaVu Sans,9,-1,0,50,0,0,0,0,0" visibilityA="0" visibilityB="0" usefillcolor="1" fillcolor="#ffff00" changeabilityA="900" changeabilityB="900" documentation="" type="515">
+          <linepath layout="Polyline">
+           <startpoint startx="-399,6736612440665" starty="-701,8919286783721"/>
+           <endpoint endx="-399,6736612440665" endy="-845,3265898499308"/>
           </linepath>
          </assocwidget>
         </associations>
@@ -272,7 +252,7 @@
   </UML:Model>
  </XMI.content>
  <XMI.extensions xmi.extender="umbrello">
-  <docsettings viewid="uS8A2qZpWbLS" uniqueid="MqJuG4qh4KPf" documentation=""/>
+  <docsettings viewid="uS8A2qZpWbLS" uniqueid="gsr9ceqMNbnx" documentation=""/>
   <listview>
    <listitem open="1" type="800" id="Views">
     <listitem open="1" type="821" id="Component View"/>

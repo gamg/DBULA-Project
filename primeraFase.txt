@@ -20,4 +20,39 @@ Para el día 6/5/2017 deben entregar un primer informe de su proyecto que conten
 
  
 
-El proyecto pueden realizarlo en grupos de dos personas o de forma individual según su preferencia.
+
+Para la segunda entrega van a modificar su primer informe según las observaciones y cambios que tengan sobre el proyecto hasta este momento y le van a agregar los prototipos de interfaz gráfica de usuario de su proyecto y las tecnologías que seleccionaron para implementarlo (ej: framework, gestor de base de datos).
+ 
+
+Para el día 24/11/2017 deben entregar informe final del proyecto que contiene los siguientes puntos:
+
+* Descripción concisa del problema (en alrededor de 250 palabras) y las razones por las que se utilizará un sistema de bases de datos para resolver este problema en lugar de usar sólo archivos.
+
+* Modelo de actores
+
+* Diagramas de actividades de los procesos involucrados
+
+* Modelo conceptual del problema (ERE)
+
+* Modelo relacional normalizado a 3FN, incluyendo dominios y demás restricciones.
+
+* Implementación del modelo relacional en SQL
+
+* Prototipo de interfaz gráfica de usuario
+
+* Tecnologías seleccionadas para la implementación
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
