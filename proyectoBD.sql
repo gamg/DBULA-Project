@@ -1,143 +1,180 @@
-CREATE DOMAIN CI VARCHAR(10) CONSTRAINT valid_identifier
-CHECK (VALUE ~’^(V|E)-[0-9]{1,8}$’);
+CREATE DOMAIN RIF VARCHAR(11) CONSTRAINT valid_rif CHECK (VALUE '^(V|J|G)-[0-9]{9}$');
 
-CREATE DOMAIN ESTADOS VARCHAR(10) 
-CHECK (
+CREATE DOMAIN CI VARCHAR(10) CONSTRAINT valid_cedula CHECK (VALUE '^(V|E)-[0-9]{7,8}$');
+
+CREATE DOMAIN ESTADOS VARCHAR(15) CONSTRAINT set_estados CHECK (
 	VALUES IN ('En espera', 'procesando', 'enviado', 'entregado', 'cancelado')
+);
+
+CREATE DOMAIN TIPO VARCHAR(15) CONSTRAINT set_tipo_empleado CHECK (
+	VALUES IN ('comun', 'encargado', 'admin')
+);
+
+CREATE DOMAIN TIPOIVA VARCHAR(15) CONSTRAINT set_tipo_iva CHECK (
+	VALUES IN ('efectivo', 'transferencia')
+);
+
+CREATE TABLE local (
+	rif RIF PRIMARY KEY,
+	nombre VARCHAR(60) NOT NULL UNIQUE,
+	correo VARCHAR(60) NOT NULL UNIQUE,
+	direccion VARCHAR(100)
 );
 
 CREATE TABLE usuario (
 	cedula CI PRIMARY KEY,
-	nombre VARCHAR(40),
-	apellido VARCHAR(40),
-	direccion VARCHAR(80) NOT NULL,
-	correo VARCHAR(40),
-	contrasena VANCHAR(40) NOT NULL
-);
-
-CREATE TABLE local (
-	id INT IDENTITY(1,1) PRIMARY KEY,
-	nombre VARCHAR(40) NOT NULL,
-	direccion VARCHAR(80)
+	nombre VARCHAR(60) NOT NULL,
+	apellido VARCHAR(60) NOT NULL,
+	direccion VARCHAR(100) NOT NULL,
+	correo VARCHAR(60) NOT NULL UNIQUE,
+	contrasena VANCHAR(60) NOT NULL
 );
 
 CREATE TABLE empleado (
-	cedula CI PRIMARY KEY FOREIGN KEY (cedula) REFERENCES usuario(cedula),
-	cargo VARCHAR(40),
-	idlocal INT NOT NULL FOREIGN KEY (idlocal) REFERENCES local(id)
+	cedula CI PRIMARY KEY,
+	tipo TIPO NOT NULL,
+	riflocal RIF NOT NULL,
+	CONSTRAINT FK_EMPLEADO_LOCAL FOREIGN KEY (riflocal) REFERENCES local(rif) 
+	ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE cliente (
-	cedula CI PRIMARY KEY FOREIGN KEY (cedula) REFERENCES usuario(cedula),
-	direccion_de_envio VARCHAR(80),
-	telefono int
+	cedula CI PRIMARY KEY,
+	telefono VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE direccion_envio (
+	cedulacliente CI PRIMARY KEY,
+	direccion VARCHAR(100) NOT NULL,
+	CONSTRAINT FK_DIRENVIO_CLIENTE FOREIGN KEY (cedulacliente) REFERENCES cliente(cedula) 
+	ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE pedido (
-	codigo INT PRIMARY KEY,
-	estado ESTADOS,
-	cedulacliente CI NOT NULL FOREIGN KEY (cedulacliente) REFERENCES cliente(cedula)
+	codigo SERIAL PRIMARY KEY,
+	estado ESTADOS NOT NULL,
+	fecha DATE NOW(),
+	cedulacliente CI NULL,
+	idtipoiva INT NULL,
+	CONSTRAINT FK_PEDIDO_CLIENTE FOREIGN KEY (cedulacliente) REFERENCES cliente(cedula) ON DELETE SET NULL ON UPDATE CASCADE,
+	CONSTRAINT FK_PEDIDO_TIPOIVA FOREIGN KEY (idtipoiva) REFERENCES tipo_iva(id) ON DELETE SET NULL ON UPDATE CASCADE
 );
 
-CREATE TABLE transferencia (
-	codigo INT FOREIGN KEY (codigo) REFERENCES pedido(codigo) PRIMARY KEY,
-	codigo_confirmacion VARCHAR(80) UNIQUE
+CREATE TABLE empleadoPedido (
+	cedulaempleado CI NULL,
+	codigopedido INT NOT NULL,
+	CONSTRAINT PK_EMPLEADOPEDIDO PRIMARY KEY (cedulaempleado,codigopedido),
+	CONSTRAINT FK_EMPLEADOPEDIDO_EMPLEADO FOREIGN KEY (cedulaempleado) REFERENCES empleado(cedula) ON DELETE SET NULL ON UPDATE CASCADE,
+	CONSTRAINT FK_EMPLEADOPEDIDO_PEDIDO FOREIGN KEY (codigopedido) REFERENCES pedido(codigo) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-CREATE TABLE gestionapedidos (
-	cedulaempleado CI FOREIGN KEY (cedulaempleado) REFERENCES empleado(cedula),
-	codigopedido INT FOREIGN KEY (codigopedido) REFERENCES pedido(codigo),
-	PRIMARY KEY (cedulaempleado,codigopedido)
+CREATE TABLE cuenta_bancaria (
+	numero_de_cuenta INT PRIMARY KEY,
+	banco VARCHAR(60) NOT NULL,
+	riflocal RIF NOT NULL,
+	CONSTRAINT FK_CUENTA_BANCARIA_LOCAL FOREIGN KEY (riflocal) REFERENCES local(rif) 
+	ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE menu (
-	id INT IDENTITY(1,1) PRIMARY KEY,
-	nombre VARCHAR(40)
+	id SERIAL PRIMARY KEY,
+	nombre VARCHAR(60) NOT NULL UNIQUE
 );
 
-CREATE TABLE tieneMenu (
-	idlocal INT FOREIGN KEY (idlocal) REFERENCES local(id),
-	idmenu INT FOREIGN KEY (idmenu) REFERENCES menu(id),
-	PRIMARY KEY (idlocal,idmenu) 
-);
-
-CREATE TABLE cuentasBancarias (
-	numero_de_cuenta INT PRIMARY KEY,
-	cedula CI NOT NULL,
-	correo VARCHAR(40)
-);
-
-CREATE TABLE beneficiario (
-	cedula CI FOREIGN KEY (cedula) REFERENCES cuentasBancarias(cedula) PRIMARY KEY,
-	nombre VARCHAR(80) NOT NULL
-);
-
-CREATE TABLE tieneCuentaBancaria (
-	idlocal INT FOREIGN KEY (idlocal) REFERENCES local(id),
-	numero_de_cuenta INT FOREIGN KEY (numero_de_cuenta) REFERENCES cuentasBancarias(numero_de_cuenta),
-	PRIMARY KEY (idlocal,numero_de_cuenta)
+CREATE TABLE localMenu (
+	riflocal RIF NOT NULL,
+	idmenu INT NOT NULL,
+	CONSTRAINT PK_LOCALMENU PRIMARY KEY (riflocal,idmenu),
+	CONSTRAINT FK_LOCALMENU_LOCAL FOREIGN KEY (riflocal) REFERENCES local(rif) ON DELETE CASCADE ON UPDATE CASCADE,
+	CONSTRAINT FK_LOCALMENU_MENU FOREIGN KEY (idmenu) REFERENCES menu(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE plato (
-	id INT IDENTITY(1,1) PRIMARY KEY,
-	nombre VARCHAR(80) NOT NULL,
-	descripcion VARCHAR(300),
-	precio FLOAT,
-	tiempo_estimado TIME
+	id SERIAL PRIMARY KEY,
+	nombre VARCHAR(60) NOT NULL UNIQUE,
+	descripcion VARCHAR(300) NOT NULL,
+	precio FLOAT NOT NULL,
+	tiempo_estimado TIME NOT NULL
 );
 
-CREATE TABLE poseeMenu (
-	idplato INT FOREIGN KEY (idplato) REFERENCES plato(id),
-	idmenu INT FOREIGN KEY (idmenu) REFERENCES menu(id),
-	PRIMARY KEY (idplato,idmenu)
+CREATE TABLE menuPlato (
+	idmenu INT NOT NULL,
+	idplato INT NOT NULL,
+	CONSTRAINT PK_MENUPLATO PRIMARY KEY (idmenu,idplato),
+	CONSTRAINT FK_MENUPLATO_MENU FOREIGN KEY (idmenu) REFERENCES menu(id) ON DELETE CASCADE ON UPDATE CASCADE,
+	CONSTRAINT FK_MENUPLATO_PLATO FOREIGN KEY (idplato) REFERENCES plato(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE extra (
-	id INT IDENTITY(1,1) PRIMARY KEY,
-	nombre VARCHAR(40) NOT NULL,
-	precio FLOAT
+	id SERIAL PRIMARY KEY,
+	nombre VARCHAR(60) NOT NULL,
+	precio FLOAT NOT NULL
 );
 
-CREATE TABLE tenerExtra (
-	idplato INT FOREIGN KEY (idplato) REFERENCES plato(id),
-	idextra INT FOREIGN KEY (idextra) REFERENCES extra(id),
-	PRIMARY KEY (idplato,idextra)
+CREATE TABLE extraPedido (
+	idextra INT NULL,
+	codigopedido INT NOT NULL,
+	precio_unitario FLOAT NOT NULL,
+	cantidad INT NOT NULL,
+	CONSTRAINT PK_EXTRAPEDIDO PRIMARY KEY (idextra,codigopedido),
+	CONSTRAINT FK_EXTRAPEDIDO_EXTRA FOREIGN KEY (idextra) REFERENCES extra(id) ON DELETE SET NULL ON UPDATE CASCADE,
+	CONSTRAINT FK_EXTRAPEDIDO_PEDIDO FOREIGN KEY (codigopedido) REFERENCES pedido(codigo) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-CREATE TABLE PedidosyPlatos (
-	idplato INT FOREIGN KEY (idplato) REFERENCES plato(id),
-	codigoPedido INT FOREIGN KEY (codigoPedido) REFERENCES pedido(codigo),
-	PRIMARY KEY (idplato,codigoPedido)
+CREATE TABLE extraMenu (
+	idextra INT NOT NULL,
+	idmenu INT NOT NULL,
+	CONSTRAINT PK_EXTRAMENU PRIMARY KEY (idextra,idmenu),
+	CONSTRAINT FK_EXTRAMENU_EXTRA FOREIGN KEY (idextra) REFERENCES extra(id) ON DELETE CASCADE ON UPDATE CASCADE,
+	CONSTRAINT FK_EXTRAMENU_MENU FOREIGN KEY (idmenu) REFERENCES menu(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-CREATE TABLE venta (
-	codigoPedido INT FOREIGN KEY (codigoPedido) REFERENCES pedido(codigo) PRIMARY KEY,
-	iva FLOAT (subtotal*0.12) NOT NULL,
-	subtotal FLOAT NOT NULL,
-	total FLOAT AS subtotal + iva
+CREATE TABLE pedidoPlato (
+	codigopedido INT NOT NULL,
+	idplato INT NULL,
+	precio_unitario FLOAT NOT NULL,
+	cantidad INT NOT NULL,
+	CONSTRAINT PK_PEDIDOPLATO PRIMARY KEY (codigopedido,idplato),
+	CONSTRAINT FK_PEDIDOPLATO_PEDIDO FOREIGN KEY (codigopedido) REFERENCES pedido(codigo) ON DELETE CASCADE ON UPDATE CASCADE,
+	CONSTRAINT FK_PEDIDOPLATO_PLATO FOREIGN KEY (idplato) REFERENCES plato(id) ON DELETE SET NULL ON UPDATE CASCADE,
 );
-
 
 CREATE TABLE bebida (
-	id INT IDENTITY(1,1) PRIMARY KEY,
-	nombre VARCHAR(40) NOT NULL,
-	precio FLOAT
+	id SERIAL PRIMARY KEY,
+	nombre VARCHAR(60) NOT NULL,
+	precio FLOAT NOT NULL
 );
 
-CREATE TABLE tieneBebida (
-	idbebida INT FOREIGN KEY (idbebida) REFERENCES bebida(id),
-	codigoPedido INT FOREIGN KEY (codigoPedido) REFERENCES pedido(codigo),
-	PRIMARY KEY (idbebida,codigoPedido)
+CREATE TABLE bebidaPedido (
+	idbebida INT NULL,
+	codigopedido INT NOT NULL,
+	precio_unitario FLOAT NOT NULL,
+	cantidad INT NOT NULL,
+	CONSTRAINT PK_BEBIDAPEDIDO PRIMARY KEY (idbebida,codigopedido),
+	CONSTRAINT FK_BEBIDAPEDIDO_BEBIDA FOREIGN KEY (idbebida) REFERENCES bebida(id) ON DELETE SET NULL ON UPDATE CASCADE,
+	CONSTRAINT FK_BEBIDAPEDIDO_PEDIDO FOREIGN KEY (codigopedido) REFERENCES pedido(codigo) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-CREATE TABLE MenuExtra (
-	idextra INT FOREIGN KEY (idextra) REFERENCES extra(id),
-	idmenu INT FOREIGN KEY (idmenu) REFERENCES menu(id),
-	PRIMARY KEY (idbebida,idextra)
+CREATE TABLE bebidaMenu (
+	idbebida INT NOT NULL,
+	idmenu INT NOT NULL,
+	CONSTRAINT PK_BEBIDAMENU PRIMARY KEY (idbebida,idmenu),
+	CONSTRAINT FK_BEBIDAMENU_BEBIDA FOREIGN KEY (idbebida) REFERENCES bebida(id) ON DELETE CASCADE ON UPDATE CASCADE,
+	CONSTRAINT FK_BEBIDAMENU_MENU FOREIGN KEY (idmenu) REFERENCES menu(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-CREATE TABLE MenuBebida (
-	idbebida INT FOREIGN KEY (idbebida) REFERENCES bebida(id),
-	idmenu INT FOREIGN KEY (idmenu) REFERENCES menu(id),
-	PRIMARY KEY (idbebida,idmenu)
+CREATE TABLE clientePedidoTransferencia (
+	cedulacliente CI NULL,
+	codigopedido INT NOT NULL,
+	codigo_confirmacion INT NOT NULL,
+	CONSTRAINT PK_CLIENTEPEDIDOTRANS PRIMARY KEY (cedulacliente,codigopedido),
+	CONSTRAINT FK_CLIENTEPEDIDOTRANS_CLIENTE FOREIGN KEY (cedulacliente) REFERENCES cliente(cedula) ON DELETE SET NULL ON UPDATE CASCADE,
+	CONSTRAINT FK_CLIENTEPEDIDOTRANS_PEDIDO FOREIGN KEY (codigopedido) REFERENCES pedido(codigo) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE tipo_iva (
+	id SERIAL PRIMARY KEY,
+	tipo TIPOIVA NOT NULL,
+	porcentaje FLOAT NOT NULL,
+	activo BOOLEAN NOT NULL
 );
