@@ -25,5 +25,5 @@
 <script src="{{ asset('corporate/libs/bootstrap-datepicker/js/bootstrap-datepicker.js') }}"></script>
 <script src="{{ asset('corporate/libs/jquery-icheck/icheck.min.js') }}"></script>
 <!-- Demo Specific JS Libraries -->
-{{--<script src="{{ asset('corporate/libs/prettify/prettify.js') }}"></script>--}}
+<script src="{{ asset('corporate/libs/prettify/prettify.js') }}"></script>
 <script src="{{ asset('corporate/js/init.js') }}"></script>
