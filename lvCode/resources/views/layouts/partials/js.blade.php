@@ -27,3 +27,4 @@
 <!-- Demo Specific JS Libraries -->
 <script src="{{ asset('corporate/libs/prettify/prettify.js') }}"></script>
 <script src="{{ asset('corporate/js/init.js') }}"></script>
+@yield('scripts')

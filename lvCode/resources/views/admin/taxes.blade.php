@@ -46,6 +46,7 @@
                                     <td>Efectivo</td>
                                     <td>12%</td>
                                     <td><span class="label label-success">Activo</span></td>
+                                    <td><input type="checkbox" class="ios-switch ios-switch-primary ios-switch-sm" checked /></td>
                                     <td>
                                         <div class="btn-group btn-group-xs">
                                             <a data-toggle="tooltip" title="Editar" class="btn btn-primary"><i class="fa fa-edit"></i></a>
@@ -57,6 +58,7 @@
                                     <td>Transferencia</td>
                                     <td>9%</td>
                                     <td><span class="label label-success">Activo</span></td>
+                                    <td><input type="checkbox" class="ios-switch ios-switch-primary ios-switch-sm" checked /></td>
                                     <td>
                                         <div class="btn-group btn-group-xs">
                                             <a data-toggle="tooltip" title="Editar" class="btn btn-primary"><i class="fa fa-edit"></i></a>
@@ -68,6 +70,7 @@
                                     <td>Efectivo</td>
                                     <td>11%</td>
                                     <td><span class="label label-danger">Inactivo</span></td>
+                                    <td><input type="checkbox" class="ios-switch ios-switch-primary ios-switch-sm" /></td>
                                     <td>
                                         <div class="btn-group btn-group-xs">
                                             <a data-toggle="tooltip" title="Editar" class="btn btn-primary"><i class="fa fa-edit"></i></a>
@@ -79,6 +82,7 @@
                                     <td>Transferencia</td>
                                     <td>8%</td>
                                     <td><span class="label label-danger">Inactivo</span></td>
+                                    <td><input type="checkbox" class="ios-switch ios-switch-primary ios-switch-sm" /></td>
                                     <td>
                                         <div class="btn-group btn-group-xs">
                                             <a data-toggle="tooltip" title="Editar" class="btn btn-primary"><i class="fa fa-edit"></i></a>

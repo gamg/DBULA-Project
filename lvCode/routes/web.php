@@ -25,3 +25,11 @@ Route::view('pedidos', 'admin.orders');
 Route::view('clientes', 'admin.customers');
 
 Route::view('impuestos', 'admin.taxes');
+
+Route::view('mis-pedidos', 'customer.my-orders');
+
+Route::view('mis-direcciones', 'customer.shipping-addresses');
+
+Route::view('nuevo-pedido', 'customer.new-order');
+
+Route::view('pedido', 'customer.order-info');
