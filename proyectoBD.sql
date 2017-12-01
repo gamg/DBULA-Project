@@ -18,7 +18,8 @@ CREATE TABLE local (
 	rif RIF PRIMARY KEY,
 	nombre VARCHAR(60) NOT NULL UNIQUE,
 	correo VARCHAR(60) NOT NULL UNIQUE,
-	direccion VARCHAR(100)
+	direccion VARCHAR(100),
+	imagen VARCHAR(30)
 );
 
 CREATE TABLE usuario (
@@ -27,7 +28,8 @@ CREATE TABLE usuario (
 	apellido VARCHAR(60) NOT NULL,
 	direccion VARCHAR(100) NOT NULL,
 	correo VARCHAR(60) NOT NULL UNIQUE,
-	contrasena VANCHAR(60) NOT NULL
+	contrasena VANCHAR(60) NOT NULL,
+	avatar VARCHAR(30)
 );
 
 CREATE TABLE empleado (
@@ -56,6 +58,7 @@ CREATE TABLE pedido (
 	fecha DATE DEFAULT NOW(),
 	cedulacliente CI NULL,
 	idtipoiva INT NULL,
+	total FLOAT NOT NULL,
 	CONSTRAINT FK_PEDIDO_CLIENTE FOREIGN KEY (cedulacliente) REFERENCES cliente(cedula) ON DELETE SET NULL ON UPDATE CASCADE,
 	CONSTRAINT FK_PEDIDO_TIPOIVA FOREIGN KEY (idtipoiva) REFERENCES tipo_iva(id) ON DELETE SET NULL ON UPDATE CASCADE
 );
@@ -95,7 +98,8 @@ CREATE TABLE plato (
 	nombre VARCHAR(60) NOT NULL UNIQUE,
 	descripcion VARCHAR(300) NOT NULL,
 	precio FLOAT NOT NULL,
-	tiempo_estimado TIME NOT NULL
+	tiempo_estimado TIME NOT NULL,
+	imagen VARCHAR(30)
 );
 
 CREATE TABLE menuPlato (
