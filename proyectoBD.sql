@@ -1,17 +1,17 @@
-CREATE DOMAIN RIF VARCHAR(11) CONSTRAINT valid_rif CHECK (VALUE '^(V|J|G)-[0-9]{9}$');
+CREATE DOMAIN RIF VARCHAR(11) CONSTRAINT valid_rif CHECK (VALUE ~ '^(V|J|G)-[0-9]{9}$');
 
-CREATE DOMAIN CI VARCHAR(10) CONSTRAINT valid_cedula CHECK (VALUE '^(V|E)-[0-9]{7,8}$');
+CREATE DOMAIN CI VARCHAR(10) CONSTRAINT valid_cedula CHECK (VALUE ~ '^(V|E)-[0-9]{7,8}$');
 
 CREATE DOMAIN ESTADOS VARCHAR(15) CONSTRAINT set_estados CHECK (
-	VALUES IN ('En espera', 'procesando', 'enviado', 'entregado', 'cancelado')
+	VALUE IN ('En espera', 'procesando', 'enviado', 'entregado', 'cancelado')
 );
 
 CREATE DOMAIN TIPO VARCHAR(15) CONSTRAINT set_tipo_empleado CHECK (
-	VALUES IN ('comun', 'encargado', 'admin')
+	VALUE IN ('comun', 'encargado', 'admin')
 );
 
 CREATE DOMAIN TIPOIVA VARCHAR(15) CONSTRAINT set_tipo_iva CHECK (
-	VALUES IN ('efectivo', 'transferencia')
+	VALUE IN ('efectivo', 'transferencia')
 );
 
 CREATE TABLE local (
@@ -28,7 +28,7 @@ CREATE TABLE usuario (
 	apellido VARCHAR(60) NOT NULL,
 	direccion VARCHAR(100) NOT NULL,
 	correo VARCHAR(60) NOT NULL UNIQUE,
-	contrasena VANCHAR(60) NOT NULL,
+	contrasena VARCHAR(60) NOT NULL,
 	avatar VARCHAR(30)
 );
 
