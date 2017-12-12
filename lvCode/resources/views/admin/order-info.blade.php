@@ -4,6 +4,7 @@
     <div class="page-heading">
         <h1><i class='fa fa-file'></i> Pedido {{ $order->codigo }}</h1>
     </div>
+    @include('partials.message')
     <div class="widget invoice">
         <div class="widget-content padding">
             <div class="row">
@@ -11,12 +12,12 @@
 
                     <div class="company-column">
                         <h4><img src="{{ asset('corporate/img/inv-logo.png') }}" alt="Logo"></h4><br>
-                        <a href="{{route('orders.index')}}" class="btn btn-primary btn-sm"><i class="fa fa-mail-reply"></i> Atrás</a>
+                        <a href="{{url('admin/pedidos')}}" class="btn btn-primary btn-sm"><i class="fa fa-mail-reply"></i> Atrás</a>
                         {{--<address>--}}
-                            {{--<br>--}}
-                            {{--Local #7<br>--}}
-                            {{--local7@local.com <br>--}}
-                            {{--<abbr title="Phone">P:</abbr> (123) 456-7890--}}
+                        {{--<br>--}}
+                        {{--Local #7<br>--}}
+                        {{--local7@local.com <br>--}}
+                        {{--<abbr title="Phone">P:</abbr> (123) 456-7890--}}
                         {{--</address>--}}
                     </div>
 
@@ -52,6 +53,25 @@
                                     {{ $order->estado }}
                                 </span>
                             </p>
+                            <form method="POST" action="{{ route('admin.orders.update', $order->codigo) }}">
+                                {{ csrf_field() }}
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">Selecciona estado</label>
+                                    <div class="col-sm-4">
+                                        <select class="form-control" name="estado">
+                                            <option value="">Selecciona</option>
+                                            <option>esperando</option>
+                                            <option>procesando</option>
+                                            <option>enviado</option>
+                                            <option>entregado</option>
+                                            <option>cancelado</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary btn-sm">Cambiar estado</button>
+                                </div>
+                            </form>
                         </small>
                     </div>
                 </div>
@@ -62,49 +82,49 @@
             <div class="table-responsive">
                 <table class="table table-condensed table-striped">
                     <thead>
-                        <tr>
-                            <th>PLATOS</th>
-                            <th>CANTIDAD</th>
-                            <th>PRECIO UNITARIO (Bs)</th>
-                            <th width="100">TOTAL</th>
-                        </tr>
+                    <tr>
+                        <th>PLATOS</th>
+                        <th>CANTIDAD</th>
+                        <th>PRECIO UNITARIO (Bs)</th>
+                        <th width="100">TOTAL</th>
+                    </tr>
                     </thead>
                     <tbody>
-                        @foreach($order->plates as $plate)
-                            <tr>
-                                <td>{{ $plate->nombre }}</td>
-                                <td>{{ $plate->pivot->cantidad }}</td>
-                                <td>{{ $plate->pivot->precio_unitario }}</td>
-                                <td>{{ $plate->pivot->precio_unitario * $plate->pivot->cantidad }}</td>
-                            </tr>
-                        @endforeach
-                        {{--<tr>--}}
-                            {{--<td colspan="3" class="text-right"><strong>Subtotal</strong></td>--}}
-                            {{--<td>{{ $plate->pivot->precio_unitario * $plate->pivot->cantidad }}</td>--}}
-                        {{--</tr>--}}
+                    @foreach($order->plates as $plate)
+                        <tr>
+                            <td>{{ $plate->nombre }}</td>
+                            <td>{{ $plate->pivot->cantidad }}</td>
+                            <td>{{ $plate->pivot->precio_unitario }}</td>
+                            <td>{{ $plate->pivot->precio_unitario * $plate->pivot->cantidad }}</td>
+                        </tr>
+                    @endforeach
+                    {{--<tr>--}}
+                    {{--<td colspan="3" class="text-right"><strong>Subtotal</strong></td>--}}
+                    {{--<td>{{ $plate->pivot->precio_unitario * $plate->pivot->cantidad }}</td>--}}
+                    {{--</tr>--}}
                     </tbody>
 
                     <thead>
-                        <tr>
-                            <th>BEBIDAS</th>
-                            <th>CANTIDAD</th>
-                            <th>PRECIO UNITARIO (Bs)</th>
-                            <th width="100">TOTAL</th>
-                        </tr>
+                    <tr>
+                        <th>BEBIDAS</th>
+                        <th>CANTIDAD</th>
+                        <th>PRECIO UNITARIO (Bs)</th>
+                        <th width="100">TOTAL</th>
+                    </tr>
                     </thead>
                     <tbody>
-                        @foreach($order->drinks as $drink)
-                            <tr>
-                                <td>{{ $drink->nombre }}</td>
-                                <td>{{ $drink->pivot->cantidad }}</td>
-                                <td>{{ $drink->pivot->precio_unitario }}</td>
-                                <td>{{ $drink->pivot->precio_unitario * $drink->pivot->cantidad }}</td>
-                            </tr>
-                        @endforeach
-                        {{--<tr>--}}
-                            {{--<td colspan="3" class="text-right"><strong>Subtotal</strong></td>--}}
-                            {{--<td>{{ $drink->pivot->precio_unitario * $drink->pivot->cantidad }}</td>--}}
-                        {{--</tr>--}}
+                    @foreach($order->drinks as $drink)
+                        <tr>
+                            <td>{{ $drink->nombre }}</td>
+                            <td>{{ $drink->pivot->cantidad }}</td>
+                            <td>{{ $drink->pivot->precio_unitario }}</td>
+                            <td>{{ $drink->pivot->precio_unitario * $drink->pivot->cantidad }}</td>
+                        </tr>
+                    @endforeach
+                    {{--<tr>--}}
+                    {{--<td colspan="3" class="text-right"><strong>Subtotal</strong></td>--}}
+                    {{--<td>{{ $drink->pivot->precio_unitario * $drink->pivot->cantidad }}</td>--}}
+                    {{--</tr>--}}
                     </tbody>
 
                     <thead>
@@ -125,8 +145,8 @@
                         </tr>
                     @endforeach
                     {{--<tr>--}}
-                        {{--<td colspan="3" class="text-right"><strong>Subtotal</strong></td>--}}
-                        {{--<td>{{ $extra->pivot->precio_unitario * $extra->pivot->cantidad }}</td>--}}
+                    {{--<td colspan="3" class="text-right"><strong>Subtotal</strong></td>--}}
+                    {{--<td>{{ $extra->pivot->precio_unitario * $extra->pivot->cantidad }}</td>--}}
                     {{--</tr>--}}
                     <tr>
                         <td colspan="3" class="text-right"><strong>TOTAL</strong></td>

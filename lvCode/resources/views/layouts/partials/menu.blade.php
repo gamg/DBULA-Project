@@ -48,39 +48,19 @@
                     </a>
                     <ul>
                         <li>
-                            <a href='#' class='active'>
-                                <i class='icon-edit'></i>
-                                <span>Mis pedidos</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href='#'>
-                                <i class='icon-address'></i>
-                                <span>Direcciones de envío</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class='has_sub'>
-                    <a href='javascript:void(0);'>
-                        <i class='fa fa-bookmark'></i><span>Gestionar</span>
-                        <span class="pull-right"><i class="fa fa-angle-down"></i></span>
-                    </a>
-                    <ul>
-                        <li>
-                            <a href='#' class='active'>
+                            <a href='{{url('admin/locales')}}' class=''>
                                 <i class='fa fa-building'></i>
                                 <span>Locales</span>
                             </a>
                         </li>
                         <li>
-                            <a href='#'>
+                            <a href='{{url('admin/empleados')}}'>
                                 <i class='fa fa-users'></i>
                                 <span>Empleados</span>
                             </a>
                         </li>
                         <li>
-                            <a href='#'>
+                            <a href='{{url('admin/cuentas-bancarias')}}'>
                                 <i class='fa fa-tags'></i>
                                 <span>Cuentas bancarias</span>
                             </a>
@@ -94,25 +74,25 @@
                     </a>
                     <ul>
                         <li>
-                            <a href='#' class='active'>
+                            <a href='{{url('admin/menus')}}' class=''>
                                 <i class='fa fa-bars'></i>
                                 <span>Menús</span>
                             </a>
                         </li>
                         <li>
-                            <a href='#'>
+                            <a href='{{url('admin/platos')}}'>
                                 <i class='fa fa-cutlery'></i>
                                 <span>Platos</span>
                             </a>
                         </li>
                         <li>
-                            <a href='#'>
+                            <a href='{{url('admin/bebidas')}}'>
                                 <i class='fa fa-coffee'></i>
                                 <span>Bebidas</span>
                             </a>
                         </li>
                         <li>
-                            <a href='#'>
+                            <a href='{{url('admin/extras')}}'>
                                 <i class='fa fa-asterisk'></i>
                                 <span>Extras</span>
                             </a>
@@ -126,19 +106,19 @@
                     </a>
                     <ul>
                         <li>
-                            <a href='#' class='active'>
+                            <a href='{{url('admin/pedidos')}}' class=''>
                                 <i class='fa fa-edit'></i>
                                 <span>Pedidos</span>
                             </a>
                         </li>
                         <li>
-                            <a href='#'>
+                            <a href='{{url('admin/clientes')}}'>
                                 <i class='fa fa-users'></i>
                                 <span>Clientes</span>
                             </a>
                         </li>
                         <li>
-                            <a href='#'>
+                            <a href='{{url('admin/impuestos')}}'>
                                 <i class='fa fa-flag'></i>
                                 <span>Tipos de IVA</span>
                             </a>

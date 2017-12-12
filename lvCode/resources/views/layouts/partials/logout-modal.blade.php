@@ -6,7 +6,14 @@
             <p class="text-center">Estás seguro de querer salir de este asombroso sistema?</p>
             <p class="text-center">
                 <button class="btn btn-danger md-close">Nope!</button>
-                <a href="login.html" class="btn btn-success md-close">Sí, estoy seguro</a>
+                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
+                   class="btn btn-success md-close">
+                    <i class="icon-logout-1"></i>
+                    Sí, estoy seguro
+                </a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    {{ csrf_field() }}
+                </form>
             </p>
         </div>
     </div>
